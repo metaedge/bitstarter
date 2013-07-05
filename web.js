@@ -2,14 +2,6 @@ var express = require('express');
 
 var app = express.createServer(express.logger());
 
-var content;
-fs.readFileSync('./index.html',function read(err, data) {
-    if (err){
-	throw err;
-    }
-    content = data;
-	console.log(content);
-}
 app.get('/', function(request, response) {
   response.send('test');
 });
